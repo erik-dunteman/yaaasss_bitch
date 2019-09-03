@@ -71,7 +71,7 @@ def generate():
 class App (object):
     def __init__(self):
         self.root=tk.Tk()
-        self.root.overrideredirect(True)
+        # self.root.overrideredirect(True)
         # self.root.attributes('-fullscreen', True)
         # self.root.wm_attributes('-type', 'splash')
         self.root.configure(background='black')

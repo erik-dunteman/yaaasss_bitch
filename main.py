@@ -1,5 +1,9 @@
-import tkinter as tk
-from tkinter import *
+try:
+    import tkinter as tk
+    from tkinter import *
+except:
+    import Tkinter as tk
+    from Tkinter import *
 import random
 
 
@@ -21,7 +25,7 @@ def generate():
              'Queeeeeen,', 
              'Damn girl,',
             'Just so you know:', 
-            'This. This right here.',
+            'This.\nThis right here.',
             'YAAAAASSSSS!!']
 
     nouns = ['your face looks', 
@@ -79,7 +83,7 @@ class App (object):
             textvariable=self.variable, 
             fg = 'white', bg = 'black',
             text="Helvetica", 
-            font=("Helvetica", 150))
+            font=("Helvetica", 50))
     def grid(self):
         self.your_label.pack()
     def update_label(self):

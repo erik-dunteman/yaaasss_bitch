@@ -9,7 +9,7 @@ import random
 
 def generate():
     pronouns = ['Well shit,', 
-            'Yas. Yaass. YAAAASSSSSS!',
+            'Yas. Yaass.\nYAAAASSSSSS!',
             'Becky,',
             'Becky', 
             'Queeeeeen', 
@@ -71,7 +71,7 @@ def generate():
 class App (object):
     def __init__(self):
         self.root=tk.Tk()
-        # self.root.overrideredirect(True)
+        self.root.overrideredirect(True)
         self.root.configure(background='black')
         self.root.geometry("{}x{}+{}+0".format(self.root.winfo_screenwidth(), self.root.winfo_screenheight(), 0))
         self.variable=StringVar()

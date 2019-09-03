@@ -1,6 +1,6 @@
 #!/bin/bash
-cd
 cd /home/pi/yaaasss_bitch
+export DISPLAY=:0
 echo Getting Updates From Repository
 git pull
 echo Starting View!

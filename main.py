@@ -97,7 +97,7 @@ class App (object):
         self.root.after(300000,self.update_label)
     def run(self):
         self.grid()
-        self.root.after(300000,self.update_label)
+        self.root.after(1,self.update_label)
         self.root.mainloop()
     def exit(self, event):
         self.root.destroy()

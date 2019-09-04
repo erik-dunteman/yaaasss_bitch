@@ -94,7 +94,7 @@ class App (object):
         self.i=self.i+1
         choice = generate()
         self.variable.set(choice)
-        self.root.after(300000,self.update_label)
+        self.root.after(120000,self.update_label)
     def run(self):
         self.grid()
         self.root.after(1,self.update_label)

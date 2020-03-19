@@ -35,13 +35,23 @@ def generate():
              'dat ass looks', 
              'your hair looks',
              'that booty looks',
+             'your quarenteen\nsuit looks',
             'EVERYTHING\nabout you looks', 
             'your personality\nlooks', 
             'your smile looks', 
-            'dem teeth look']
+            'dem teeth look',
+            'your coronavirus\nlooks',
+            'that virus looks',
+            'your coronavirus\nlooks',
+            'your coronavirus\nlooks',]
 
-    adjectives = ['cute!', 
-            'sexy', 
+    adjectives = ['like it\nhas Covid-19', 
+            'sexy',
+            'diseased',
+            'hopeless',
+            'like you\nhave coronavirus',
+            'pretty viral\ntbh',
+            'like you should\ngo to a hospital', 
             'on point',
             'on fleek', 
             'perfect,\njust like you', 
@@ -49,7 +59,9 @@ def generate():
             'amazing',
             'hella good',
             'tasty', 
-            'smoking hot', 
+            'smoking hot',
+            'feverish.',
+            'like you should\nget tested 4 covid' ,
             'like a party', 
             'fine.',
             'great with\nyour shoes',
@@ -63,8 +75,13 @@ def generate():
     j = random.randint(0,len(nouns)-1)
     k = random.randint(0, len(adjectives)-1)
 
-
-    return ("{}\n{}\n{}".format(pronouns[i], nouns[j], adjectives[k]))
+    others = ['THE WORLD\nIS BURNING', 'THERE IS\nNO ESCAPE', "FUCK"]
+    main = "{}\n{}\n{}".format(pronouns[i], nouns[j], adjectives[k])
+    others.append(main)
+    others.append(main)
+    others.append(main)
+    i = random.randint(0,len(others)-1)
+    return (others[i])
 
 
 
@@ -79,7 +96,6 @@ class App (object):
         self.root.bind("<Any-KeyPress>", self.exit)
 
         self.variable=StringVar()
-        self.i=0
         self.frame = Frame(self.root)
         self.frame.place(relx = 0.5, rely = 0.5, anchor = CENTER)
         self.your_label=Label(self.frame,
@@ -91,7 +107,6 @@ class App (object):
     def grid(self):
         self.your_label.pack()
     def update_label(self):
-        self.i=self.i+1
         choice = generate()
         self.variable.set(choice)
         self.root.after(120000,self.update_label)

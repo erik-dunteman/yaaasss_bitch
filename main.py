@@ -35,7 +35,7 @@ def generate():
              'dat ass looks', 
              'your hair looks',
              'that booty looks',
-             'your quarenteen\nsuit looks',
+             'your quarantine\nsuit looks',
             'EVERYTHING\nabout you looks', 
             'your personality\nlooks', 
             'your smile looks', 

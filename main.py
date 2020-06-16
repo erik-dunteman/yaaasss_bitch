@@ -35,23 +35,14 @@ def generate():
              'dat ass looks', 
              'your hair looks',
              'that booty looks',
-             'your quarantine\nsuit looks',
+             'that new haircut is',
             'EVERYTHING\nabout you looks', 
             'your personality\nlooks', 
             'your smile looks', 
-            'dem teeth look',
-            'your coronavirus\nlooks',
-            'that virus looks',
-            'your coronavirus\nlooks',
-            'your coronavirus\nlooks',]
+            'dem teeth look',]
 
-    adjectives = ['like it\nhas Covid-19', 
+    adjectives = [ 
             'sexy',
-            'diseased',
-            'hopeless',
-            'like you\nhave coronavirus',
-            'pretty viral\ntbh',
-            'like you should\ngo to a hospital', 
             'on point',
             'on fleek', 
             'perfect,\njust like you', 
@@ -60,8 +51,6 @@ def generate():
             'hella good',
             'tasty', 
             'smoking hot',
-            'feverish.',
-            'like you should\nget tested 4 covid' ,
             'like a party', 
             'fine.',
             'great with\nyour shoes',
@@ -75,11 +64,15 @@ def generate():
     j = random.randint(0,len(nouns)-1)
     k = random.randint(0, len(adjectives)-1)
 
-    others = ['THE WORLD\nIS BURNING', 'THERE IS\nNO ESCAPE', "FUCK"]
+    others = ["FUCK"]
     main = "{}\n{}\n{}".format(pronouns[i], nouns[j], adjectives[k])
-    others.append(main)
-    others.append(main)
-    others.append(main)
+    for i in range(10):
+        others.append(main)
+
+    rando = random.randint(0,1000)
+    if rando == 999:
+        others = ["Becky, you're an\nincredible sister\nand I'm lucky\nto have you"]
+
     i = random.randint(0,len(others)-1)
     return (others[i])
 
